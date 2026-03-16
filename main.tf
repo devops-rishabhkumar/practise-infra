@@ -10,3 +10,8 @@ resource "azurerm_storage_account" "sa" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
+
+resource "azurerm_storage_container" "container" {
+    name = "tf.state"
+    container_access_type = "private"
+}
