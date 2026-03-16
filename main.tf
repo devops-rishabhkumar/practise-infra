@@ -14,4 +14,8 @@ resource "azurerm_storage_account" "sa" {
 resource "azurerm_storage_container" "container1" {
     name = "tf.state"
     container_access_type = "public"
+  
+resource "azurerm_storage_container" "container" {
+    name = "tf.state"
+    container_access_type = "private"
 }
