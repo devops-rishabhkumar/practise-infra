@@ -3,11 +3,6 @@ resource "azurerm_resource_group" "rg" {
   location = "eastus"
 }
 
-resource "azurerm_resource_group" "change1" {
-  name     = "rg-change"
-  location = "eastus"
-}
-
 resource "azurerm_storage_account" "sa" {
   name                     = "stterraform"
   resource_group_name      = azurerm_resource_group.rg.name
