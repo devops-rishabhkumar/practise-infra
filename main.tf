@@ -21,3 +21,8 @@ resource "azurerm_storage_container" "container1" {
     container_access_type = "public"
 
 }
+
+resource "azurerm_storage_container" "container3" {
+    name = "tf.state"
+    container_access_type = "private"
+}
