@@ -19,5 +19,5 @@ resource "azurerm_storage_container" "container2" {
 resource "azurerm_storage_container" "container1" {
     name = "tf.state"
     container_access_type = "public"
->>>>>>>>> Temporary merge branch 2
+
 }
