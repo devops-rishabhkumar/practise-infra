@@ -2,7 +2,13 @@ name: Terraform Init
 
 on:
   workflow_dispatch:
-    pull_request:
+    pull:
+      branches:
+        - main
+        - dev
+        - feature
+
+    push:
       branches:
         - main
         - dev
