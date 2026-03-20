@@ -16,4 +16,11 @@ jobs:
       - name: Checkout Action
         uses: actions/checkout@v6.0.2
 
+  # Azure_Login:
+  #   name: Az Login
+  #   steps:
+  #     - name: Azure Login Command
+        
+  
+
         
