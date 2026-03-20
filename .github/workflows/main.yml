@@ -18,7 +18,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Terraform Setup
-        uses: hashicorp/setup-terraform@v2.0.3
+        uses: hashicorp/setup-terraform@v4
 
       - name: Checkout
         uses: actions/checkout@v6
@@ -31,14 +31,22 @@ jobs:
           
       - name: Terraform Init
         run: terraform init
-
       - name: Terraform Plan
-      #   run: terraform plan -out=tfplan.binary
-      # - name: Show Plan
-        id: plan
-        run: terraform plan -no-color
+        run: terraform plan -out .planfile
+      - name: Post PR comment
+        uses: borchero/terraform-plan-comment@v2
+        with:
+          token: ${{ github.token }}
+          planfile: .planfile
 
-      - run: echo 
-      - run: echo ${{ steps.plan.outputs.stdout }}
-      
+
+      # - name: Terraform Plan
+      # #   run: terraform plan -out=tfplan.binary
+      # # - name: Show Plan
+      #   id: plan
+      #   run: terraform plan -no-color
+
+      # - run: echo ${{ steps.plan.outputs.stdout }}
+      # - run: echo ${{ steps.plan.outputs.stderr }}
+      # - run: echo ${{ steps.plan.outputs.exitcode }}
         
