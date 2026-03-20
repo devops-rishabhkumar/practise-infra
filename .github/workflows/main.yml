@@ -1,4 +1,4 @@
-name: Terraform Init
+name: Terraform Infra Configuration on Own Account
 
 on:
   workflow_dispatch:
@@ -8,14 +8,14 @@ on:
 
   push:
     branches:
-      # - main
+      - main
       - dev
 
 jobs:
   terraform_init:
     name: Terrafom Init
-    # runs-on: ubuntu-slim
-    runs-on: self-hosted
+    runs-on: ubuntu-slim
+    # runs-on: self-hosted
     permissions:
       pull-requests: write
     steps:
