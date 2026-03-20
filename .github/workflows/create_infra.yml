@@ -4,4 +4,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  
+  Terraform_Runner:
+    name: Runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Terraform Setup
+        uses: hashicorp/setup-terraform@v2.0.3
+        with:
+          terraform_version: "1.14.6"
+
+      - name: Checkout Action
+        uses: actions/checkout@v6.0.2
+
+        
