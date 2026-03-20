@@ -1,4 +1,4 @@
-name: Terraform Infra Configuration on Own Account
+name: Account
 
 on:
   workflow_dispatch:
