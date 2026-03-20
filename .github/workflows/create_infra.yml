@@ -1,0 +1,7 @@
+name: Terraform Infra Workflow Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  
