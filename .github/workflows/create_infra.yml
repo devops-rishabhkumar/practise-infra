@@ -15,12 +15,13 @@ jobs:
 
       - name: Checkout Action
         uses: actions/checkout@v6.0.2
+    
+      - name: Az Login
+        uses: Azure/login@v3
+        with:
+          creds: ${{ secrets.AZURE_LOGIN }}
+          
 
-  # Azure_Login:
-  #   name: Az Login
-  #   steps:
-  #     - name: Azure Login Command
-        
   
 
         
