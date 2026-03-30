@@ -58,9 +58,9 @@ jobs:
           cat plan.txt >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
 
-      - name: Terraform Apply
-        id: apply
-        run: terraform apply --auto-approve
+      # - name: Terraform Apply
+      #   id: apply
+      #   run: terraform apply --auto-approve
 
       # - name: Terraform Plan
       # #   run: terraform plan -out=tfplan.binary
