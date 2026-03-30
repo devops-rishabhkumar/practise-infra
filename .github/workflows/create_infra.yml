@@ -23,6 +23,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_LOGIN }}
           
+      - name: Az Login Success
+        run: echo "Azure Login Successful"
 
   
 
